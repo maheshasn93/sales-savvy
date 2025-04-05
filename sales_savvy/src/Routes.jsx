@@ -7,7 +7,7 @@ const AppRoutes = () => {
    return (
     <Routes>
        <Route path="/login" element= {<LoginPage/>}/>
-        <Route path="/register" element= {<RegistrationPage/>}/>
+       <Route path="/register" element= {<RegistrationPage/>}/>
 
     {/* Add more routes here as your app grows */}
     </Routes>
