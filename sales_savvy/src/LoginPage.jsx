@@ -1,11 +1,12 @@
 import React, {useState} from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './assets/styles.css';
 
 export default function LoginPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
     const handleSignIn = async (e) => {
         e.preventDefault();
@@ -29,9 +30,9 @@ export default function LoginPage() {
 
                 //Redirect user based on their role
                 if(data.role == 'CUSTOMER') {
-                    Navigate('/customerhome');
-                }else if(data,role == 'ADMIN'){
-                    Navigate('/adminhome');
+                    navigate('/customerhome');
+                }else if(data.role == 'ADMIN'){
+                    navigate('/adminhome');
                 }else {
                     throw new error("Invalid user role");
                 }

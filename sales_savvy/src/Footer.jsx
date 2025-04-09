@@ -14,9 +14,9 @@ export function Footer() {
                 <a href="#">Terms of Service</a>
                 <a href="#">Privacy Policy</a>
             </div>
-            <div className="footer-bootom">
+            <div className="footer-bottom">
                 <p>2025 SalesSavvy. All rights reserved</p>
             </div>
         </footer>
-    )
+    );
 }

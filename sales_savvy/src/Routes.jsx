@@ -1,17 +1,22 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import LoginPage from './LoginPage';
+import { Navigate } from "react-router-dom";
+import LoginPage from "./LoginPage";
 import RegistrationPage from "./RegistrationPage";
+import CustomerHomePage from "./CustomerHomePage";
+import CartPage from "./CartPage";
 
 const AppRoutes = () => {
-   return (
+  return (
     <Routes>
-       <Route path="/login" element= {<LoginPage/>}/>
-       <Route path="/register" element= {<RegistrationPage/>}/>
-
-    {/* Add more routes here as your app grows */}
+      <Route path="/" element={<Navigate to="/login" />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegistrationPage />} />
+      <Route path="/customerhome" element={<CustomerHomePage/>}/>
+      <Route path="/UserCartPage" element={<CartPage/>}/>
+      {/* Add more routes as needed */}
     </Routes>
-   ); 
-}; 
+  );
+};
 
 export default AppRoutes;
